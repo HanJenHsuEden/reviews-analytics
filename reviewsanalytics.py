@@ -14,3 +14,9 @@ with open('reviews.txt','r') as f:
 		sum_len = sum_len + len(d)
 print('全部留言的平均長度:',sum_len / len(data))
 
+new = []
+for d in data:
+	if len(d) < 100:
+		new.append(d)
+print('留言長度小於100的留言總共有：',len(new),'筆')
+print(new[0])
